@@ -1,77 +1,100 @@
-# react-scrollchor
-A React component for animate scroll to #hash link
+# React Scrollchor
+
+[![npm version](https://badge.fury.io/js/react-scrollchor.svg)](https://badge.fury.io/js/react-scrollchor)
+
+> A React component for scroll to `#hash` links with smooth animations. Scrollchor is a mix of `Scroll` and `Anchor`, a joke name for a useful component.
+
+## hash
+`hash` is the `id` of HTML tag on current page
 
 ## Installation
 
-```
-$ npm install react-scrollchor --save
-```
+### npm
 
-## Description
-Scrollchor is the mix of `Scroll` and `Anchor`, more funny joke name that anyone would found. It can be change if you want, just:
-```
-import MyBetterScrollchorNanme from 'react-scrollchor' 
+```bash
+npm install react-scrollchor --save
 ```
 
 ## Usage
 
-```
-...
+```javascript
 import Scrollchor from 'react-scrollchor';
-...
+```
+```javascript
 export default (props) => (
   <Page>
-
-    <Head />
 
     <Navbar brand={brand} className="navbar-fixed-top">
       <NavItem><Scrollchor to="" className="nav-link">Home</Scrollchor></NavItem>
       <NavItem><Scrollchor to="#sample-code" className="nav-link">Sample</Scrollchor></NavItem>
       <NavItem><Scrollchor to="#features" className="nav-link">Features</Scrollchor></NavItem>
-      <NavItem><Scrollchor to="#signup" className="nav-link">SignUp</Scrollchor></NavItem>
+      <NavItem><Scrollchor to="footer" className="nav-link">SignUp</Scrollchor></NavItem>
     </Navbar>
 
-  ....
+
   <Section id="sample-code">
-  ....
+
   </Section>
 
-  <Section id="features">
-  ....
-  </Section>
+  <div id="features">
 
-  <Section id="signup">
-  ....
-  </Section>
+  </div>
+
+  <footer id="footer">
+
+  </footer>
 
 </Page>
 ```
 
+# Prop types
+```javascript
+  propTypes: {
+
+    /**
+     * id of tag scroll target node
+     * - starting `#` can be omited
+     * - this prop is required
+     * - let it blank, `to = ''`, for scroll to page top
+     */
+    to: PropTypes.string.isRequired
+
+    /**
+     * scroll smooth animation can be customize
+     * Accepted options:
+     *  { offset: 0, duration: 400, easing: easeOutQuad }
+     */
+    animate: PropTypes.object,
+}
+```
+
 # Custom animation
 
-Animate behavior can be customize per each `#hash link`.
+Animated behavior can be customize on each `#hash link` instance.
 
-Ex:
-
-```
+```javascript
 <Scrollchor to="#aboutus" animate={{offset: 20, duration: 600}} className="nav-link">Home</Scrollchor>
 ```
 
-### default animation
-```
+## default animation config
+```javascript
 { offset: 0, duration: 400, easing: easeOutQuad }
 ```
 This setting is equivalent to default jQuery.animate `easing: swing`
 
-## Easing functions links
+## more `Easing` functions
 
 * [jQuery easings](http://api.jqueryui.com/easings/)
 * [Robert Penner's Easing Functions](http://robertpenner.com/easing/)
 * [Javascript source code](https://github.com/danro/jquery-easing/blob/master/jquery.easing.js)
 
 ## Contributing
+
 * Documentation improvement
 * Feel free to send any PR
 
-## LICENSE
-MIT
+## License
+
+[ISC][isc-license]
+
+[isc-license]:./LICENSE
