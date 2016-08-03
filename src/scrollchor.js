@@ -18,11 +18,11 @@ export default class Scrollchor extends React.Component {
   };
 
   componentWillMount() {
-    const { to = '#' } = this.props;
-    this._to = /^#/.test(to) ?  to : `#${to}`;
+    const { to = '' } = this.props;
+    this._to = to.replace(/^#/, '');
   }
 
   render() {
-    return <a { ...this.props } href={this._to} onClick={this.handleClick}/>;
+    return <a { ...this.props } href={'#' + this._to} onClick={this.handleClick}/>;
   }
 }
