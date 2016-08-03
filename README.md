@@ -21,7 +21,7 @@ npm install react-scrollchor --save
 ## Usage
 
 ```javascript
-import Scrollchor from 'react-scrollchor';
+import { Scrollchor } from 'react-scrollchor';
 ```
 ```javascript
 export default (props) => (
