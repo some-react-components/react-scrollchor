@@ -1,7 +1,6 @@
 {
   "name": "react-scrollchor--example",
   "version": "0.0.1",
-  "private": true,
   "devDependencies": {
     "react-scripts": "0.2.1"
   },
@@ -9,7 +8,7 @@
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "react-lorem-component": "^0.10.1",
-    "react-scrollchor": "bySabi/react-scrollchor#WIP"
+    "react-scrollchor": "2.x.x"
   },
   "scripts": {
     "start": "react-scripts start",
