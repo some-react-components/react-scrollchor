@@ -4,6 +4,9 @@
 
 > A React component for scroll to `#hash` links with smooth animations. Scrollchor is a mix of `Scroll` and `Anchor`, a joke name for a useful component.
 
+See it in action Demo [video](https://github.com/bySabi/react-scrollchor/blob/example/demo/scrollchor.webm?raw=true) or example [page](https://bySabi.github.com/react-scrollchor/)
+
+
 ## hash
 `hash` is the `id` of HTML tag on current page
 
@@ -87,6 +90,10 @@ This setting is equivalent to default jQuery.animate `easing: swing`
 * [jQuery easings](http://api.jqueryui.com/easings/)
 * [Robert Penner's Easing Functions](http://robertpenner.com/easing/)
 * [Javascript source code](https://github.com/danro/jquery-easing/blob/master/jquery.easing.js)
+
+## Example
+
+[react-scrollchor--example](https://github.com/bySabi/react-scrollchor/tree/example)
 
 ## Contributing
 
