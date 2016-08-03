@@ -3,6 +3,10 @@ import { getScrollTop, setScrollTop, getOffsetTop } from './utils';
 export default function animateScroll(id, animate) {
   const element = id ? document.getElementById(id) : document.body;
 
+  if (!element) {
+    throw new Error(`Don't found element with id '#${id}'`);
+  }
+
   scrollTo(element, animate);
 }
 
@@ -14,12 +18,15 @@ function scrollTo(element, { offset = 0, duration = 400, easing = easeOutQuad } 
 
   function animate(elapsedTime) {
     const elapsed = elapsedTime + increment;
-    const position = easing(undefined, elapsed, start, change, duration);
+    const position = easing(null, elapsed, start, change, duration);
 
     setScrollTop(position);
 
-    if (elapsed < duration)
-      setTimeout(function() { animate(elapsed) }, increment);
+    if (elapsed < duration) {
+      setTimeout(function() {
+        animate(elapsed);
+      }, increment);
+    }
   }
 
   animate(0);
