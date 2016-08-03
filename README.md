@@ -8,7 +8,7 @@ See it in action demo [video](https://github.com/bySabi/react-scrollchor/blob/ex
 
 
 ## hash
-`hash` is the `id` of HTML tag on current page
+`hash` is the `id` of a HTML tag on current page
 
 ## Installation
 
