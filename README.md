@@ -2,7 +2,7 @@
 
 > a [React Scrollchor](https://github.com/bySabi/react-scrollchor) example create with [Create React App](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)
 
-See it in action Demo [video](https://github.com/bySabi/react-scrollchor/blob/example/demo/scrollchor.webm?raw=true) or example [page](https://bySabi.github.com/react-scrollchor/)
+See it in action demo [video](https://github.com/bySabi/react-scrollchor/blob/example/demo/scrollchor.webm?raw=true) or example [page](https://bySabi.github.com/react-scrollchor/)
 
 
 ## Installation
