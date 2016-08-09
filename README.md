@@ -4,7 +4,9 @@
 
 > A React component for scroll to `#hash` links with smooth animations. Scrollchor is a mix of `Scroll` and `Anchor`, a joke name for a useful component.
 
-See it in action demo [video](https://github.com/bySabi/react-scrollchor/blob/example/demo/scrollchor.webm?raw=true) or example [page](https://bySabi.github.com/react-scrollchor/)
+See it in action:
+* demo [video](https://github.com/bySabi/react-scrollchor/blob/example/demo/scrollchor.webm?raw=true)
+* example [page](https://bySabi.github.com/react-scrollchor/)
 
 
 ## hash

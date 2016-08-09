@@ -3,10 +3,7 @@
 *.sublime-workspace
 
 node_modules/
-bower_components/
-
-# Compiled bundles
-bundle.js
+lib/
 
 # npm debug file
 npm-debug.log

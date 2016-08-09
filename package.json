@@ -10,6 +10,8 @@
   "scripts": {
     "build-npm": "rimraf lib && mkdirp lib && babel src/ -d lib/",
     "lint": "eslint . --ext .js,.jsx",
+    "testonly": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && npm run testonly",
     "prepublish": "npm run build-npm"
   },
   "keywords": [
@@ -33,7 +35,7 @@
     "babel-preset-stage-2": "6.x.x",
     "babel-plugin-transform-class-properties": "6.x.x",
     "eslint": "3.x.x",
-    "eslint-setup-orgztion-services": "orgztion/eslint-setup-orgztion-services",
+    "eslint-modules-standard-deviation": "1.x.x",
     "rimraf": "*",
     "mkdirp": "*"
   }

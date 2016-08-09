@@ -34,5 +34,5 @@ function scrollTo(element, { offset = 0, duration = 400, easing = easeOutQuad } 
 
 // jQuery easing 'swing'
 function easeOutQuad(x, t, b, c, d) {
-  return -c *(t/=d)*(t-2) + b;
+  return -c * (t /= d) * (t - 2) + b;
 }
