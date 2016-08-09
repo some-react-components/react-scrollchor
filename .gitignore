@@ -2,8 +2,8 @@
 .idea/
 *.sublime-workspace
 
-node_modules/
-lib/
+node_modules
+lib
 
 # npm debug file
 npm-debug.log
