@@ -1,4 +1,4 @@
-# React Scrollchor
+# react-scrollchor (React Scrollchor)
 
 [![npm version](https://badge.fury.io/js/react-scrollchor.svg)](https://badge.fury.io/js/react-scrollchor)
 
