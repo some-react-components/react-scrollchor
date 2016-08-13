@@ -3,6 +3,7 @@
 *.sublime-workspace
 
 node_modules
+lib
 
 # npm debug file
 npm-debug.log
