@@ -7,7 +7,7 @@
 
 See it in action:
 * demo [video](https://github.com/bySabi/react-scrollchor/blob/example/demo/scrollchor.webm?raw=true)
-* example [page](https://bySabi.github.com/react-scrollchor/)
+* example [page](https://bySabi.github.com/react-scrollchor/) and [source code](https://github.com/bySabi/react-scrollchor/tree/example)
 
 
 ## hash
