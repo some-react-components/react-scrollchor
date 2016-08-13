@@ -1,5 +1,5 @@
 export function getScrollTop() {
-  // $('html, body').scrollTop
+  // jQuery => $('html, body').scrollTop
   return document.documentElement.scrollTop || document.body.scrollTop;
 }
 

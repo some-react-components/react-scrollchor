@@ -1,0 +1,6 @@
+.eslintignore
+.eslintrc.js
+CHANGELOG.md
+CONTRIBUTING.md
+src
+.babelrc

@@ -1,6 +1,6 @@
 {
   "name": "react-scrollchor",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A React component for scroll to #hash links with smooth animations",
   "files": [
     "lib"
@@ -36,7 +36,7 @@
     "babel-plugin-transform-class-properties": "6.x.x",
     "eslint": "3.x.x",
     "eslint-modules-standard-deviation": "1.x.x",
-    "rimraf": "*",
+    "rimraf": "2.x.x",
     "mkdirp": "*"
   }
 }

@@ -1,19 +1,16 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import animateScroll from './animatescroll';
-
-const { object, string } = React.PropTypes;
 
 export default class Scrollchor extends React.Component {
   static propTypes = {
-    to: string.isRequired,
-    animate: object
+    to: PropTypes.string.isRequired,
+    animate: PropTypes.object
   };
 
-  handleClick = event => {
+  handleClick = (event) => {
     event.preventDefault();
 
     const { animate } = this.props;
-
     animateScroll(this._to, animate);
   };
 
