@@ -4,7 +4,7 @@ import warning from 'fbjs/lib/warning';
 export default function animateScroll(id, animate) {
   const element = id ? document.getElementById(id) : document.body;
 
-  warning(element, `Don't found element with id '#${id}'`);
+  warning(element, `Cannot find element: #${id}`);
 
   scrollTo(element, animate);
 }
