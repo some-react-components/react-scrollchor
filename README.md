@@ -21,6 +21,19 @@ See it in action:
 npm install react-scrollchor --save
 ```
 
+### Dependencies
+* User should provide its  own `React` package
+* on `Node 4` and `npm 2` package [fbjs](https://www.npmjs.com/package/fbjs) should be installed too:
+    ```bash
+    npm install fbjs --save
+    ```
+
+#### `fbjs` package
+[fbjs](https://www.npmjs.com/package/fbjs) is collection of utility libraries created by React Team. It include useful modules like `warning` and `invariant`
+
+
+
+
 ## Usage
 
 ```javascript

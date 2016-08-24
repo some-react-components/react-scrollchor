@@ -1,5 +1,10 @@
 ## master (unreleased)
 
+## 2.1.2
+
+- add fbjs peer dependencie
+- improved doc
+
 ## 2.0.0
 
 - Update package
