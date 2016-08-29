@@ -20,6 +20,7 @@
     "react-component",
     "scroll",
     "anchor",
+    "scrollchor",
     "hash",
     "animate"
   ],
