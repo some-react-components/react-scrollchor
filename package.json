@@ -1,6 +1,6 @@
 {
   "name": "react-scrollchor",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "A React component for scroll to #hash links with smooth animations",
   "files": [
     "lib"

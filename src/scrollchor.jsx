@@ -20,6 +20,7 @@ export default class Scrollchor extends React.Component {
   }
 
   render() {
-    return <a {...this.props} href={'#' + this._to} onClick={this.handleClick} />;
+    const { to, animate, ...props } = this.props;  // eslint-disable-line no-unused-vars
+    return <a {...props} href={'#' + this._to} onClick={this.handleClick} />;
   }
 }
