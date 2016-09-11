@@ -33,8 +33,6 @@ npm install react-scrollchor --save
 [fbjs](https://www.npmjs.com/package/fbjs) is collection of utility libraries created by React Team. It include useful modules like `warning` and `invariant`
 
 
-
-
 ## Usage
 
 ```javascript
@@ -84,7 +82,7 @@ export default (props) => (
      * Accepted options:
      *  { offset: 0, duration: 400, easing: easeOutQuad }
      */
-    animate: PropTypes.object,
+    animate: PropTypes.object
 }
 ```
 
