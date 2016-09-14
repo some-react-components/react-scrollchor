@@ -29,8 +29,8 @@ npm install react-scrollchor --save
     npm install fbjs --save
     ```
 
-#### `fbjs` package
-[fbjs](https://www.npmjs.com/package/fbjs) is collection of utility libraries created by React Team. It include useful modules like `warning` and `invariant`
+#### **fbjs** package
+[fbjs](https://www.npmjs.com/package/fbjs) is a collection of utility libraries created by React Team. It include useful modules like `warning` and `invariant`
 
 
 ## Usage
