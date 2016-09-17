@@ -2,6 +2,10 @@
 
 ## 2.1.3
 
+- Fix incorrect passed props to tag
+
+## 2.1.2
+
 - add fbjs peer dependencie
 - improved doc
 
