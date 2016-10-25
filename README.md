@@ -2,7 +2,8 @@
 
 [![npm version](https://badge.fury.io/js/react-scrollchor.svg)](https://badge.fury.io/js/react-scrollchor)
 [![npm downloads](https://img.shields.io/npm/dm/react-scrollchor.svg?style=flat-square)](https://www.npmjs.com/package/react-scrollchor)
-[![Known Vulnerabilities](https://snyk.io/test/github/bysabi/react-scrollchor/badge.svg)](https://snyk.io/test/github/bysabi/react-scrollchor)
+[![bitHound Overall Score](https://www.bithound.io/github/bySabi/react-scrollchor/badges/score.svg)](https://www.bithound.io/github/bySabi/react-scrollchor)
+[![Donate](https://img.shields.io/badge/$-support-green.svg?style=flat-square)](https://paypal.me/bySabi/10)
 
 > A React component for scroll to `#hash` links with smooth animations. Scrollchor is a mix of `Scroll` and `Anchor`, a joke name for a useful component.
 
