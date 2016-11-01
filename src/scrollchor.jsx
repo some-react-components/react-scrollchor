@@ -4,14 +4,18 @@ import animateScroll from './animatescroll';
 export default class Scrollchor extends React.Component {
   static propTypes = {
     to: PropTypes.string.isRequired,
-    animate: PropTypes.object
+    animate: PropTypes.object,
+    callback: PropTypes.func
   };
 
   handleClick = (event) => {
     event.preventDefault();
 
-    const { animate } = this.props;
+    const { animate, callback } = this.props;
     animateScroll(this._to, animate);
+    if (callback) {
+      callback();
+    }
   };
 
   componentWillMount() {
