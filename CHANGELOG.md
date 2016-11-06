@@ -1,5 +1,9 @@
 ## master (unreleased)
 
+## 2.2.0
+
+- Add beforeAnimate/afterAnimate hooks to scroll handler
+
 ## 2.1.3
 
 - Fix incorrect passed props to tag

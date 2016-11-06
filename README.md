@@ -76,14 +76,24 @@ export default (props) => (
      * - this prop is required
      * - let it blank, `to = ''`, for scroll to page top
      */
-    to: PropTypes.string.isRequired
+    to: PropTypes.string.isRequired,
 
     /**
      * scroll smooth animation can be customize
      * Accepted options:
      *  { offset: 0, duration: 400, easing: easeOutQuad }
      */
-    animate: PropTypes.object
+    animate: PropTypes.object,
+
+    /**
+     * callback function triggered before scroll to #hash
+     */
+    beforeAnimate: PropTypes.func,
+
+    /**
+     * callback function triggered after scroll to #hash
+     */
+    afterAnimate: PropTypes.func
 }
 ```
 
@@ -106,6 +116,12 @@ This setting is equivalent to default jQuery.animate `easing: swing`
 * [jQuery easings](http://api.jqueryui.com/easings/)
 * [Robert Penner's Easing Functions](http://robertpenner.com/easing/)
 * [Javascript source code](https://github.com/danro/jquery-easing/blob/master/jquery.easing.js)
+
+## `before` and `after` animate callbacks
+Use this callbacks to trigger behaviours like, for example, update state, load async stuffs, etc.
+```javascript
+<Scrollchor to="#aboutus" afterAnimate={() => updateState(this)}>Home</Scrollchor>
+```
 
 ## Example
 
