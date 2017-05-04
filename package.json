@@ -7,6 +7,9 @@
   ],
   "repository": "https://github.com/bySabi/react-scrollchor.git",
   "main": "lib/scrollchor.js",
+  "engines": {
+    "npm": ">=3.0"
+  },
   "scripts": {
     "build-npm": "rimraf lib && mkdirp lib && babel src/ -d lib/",
     "lint": "eslint . --ext .js,.jsx",
@@ -27,7 +30,7 @@
   "author": "bySabi Files",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^15.0.0",
+    "react": ">=15.0.0",
     "fbjs": "*"
   },
   "devDependencies": {

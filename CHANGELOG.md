@@ -1,5 +1,10 @@
 ## master (unreleased)
 
+## 3.0.0
+
+- Add React 15.5.x support
+- Deprecate React 0.14 peer dependencie
+
 ## 2.2.0
 
 - Add beforeAnimate/afterAnimate hooks to scroll handler
