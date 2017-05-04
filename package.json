@@ -1,6 +1,6 @@
 {
   "name": "react-scrollchor",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "A React component for scroll to #hash links with smooth animations",
   "files": [
     "lib"
@@ -27,7 +27,7 @@
   "author": "bySabi Files",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0",
+    "react": "^15.0.0",
     "fbjs": "*"
   },
   "devDependencies": {
@@ -44,7 +44,7 @@
     "fbjs": "*",
     "mkdirp": "*",
     "prop-types": "^15.5.8",
-    "react": "15.x.x",
+    "react": "^15.5.4",
     "rimraf": "2.x.x"
   }
 }
