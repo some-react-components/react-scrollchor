@@ -5,3 +5,5 @@ lib
 
 # npm debug file
 npm-debug.log
+
+package-lock.json*

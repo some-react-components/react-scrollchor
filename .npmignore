@@ -1,5 +1,5 @@
 .eslintignore
-.eslintrc.js
 CHANGELOG.md
 CONTRIBUTING.md
 src
+package-lock.json*
