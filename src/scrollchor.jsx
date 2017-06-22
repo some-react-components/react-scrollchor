@@ -26,6 +26,15 @@ export default class Scrollchor extends React.Component {
     afterAnimate: PropTypes.func
   };
 
+  componentWillReceiveProps ({ animate }) {
+      const {
+          offset = 0, duration = 400, easing = easeOutQuad
+      } = animate || {};
+
+      this._animate = { offset, duration, easing };
+  }
+
+
   handleClick = (event) => {
     this._beforeAnimate(event);
     event.preventDefault();
