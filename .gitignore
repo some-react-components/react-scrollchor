@@ -1,9 +1,7 @@
-.DS_Store
-
-node_modules
 lib
 
 # npm debug file
 npm-debug.log
 
+node_modules
 package-lock.json*

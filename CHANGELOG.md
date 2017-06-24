@@ -1,5 +1,15 @@
 ## master (unreleased)
 
+## 4.0.0
+
+- Add support to changeable props. All props become responsive
+- Add simulateClick API for animate scroll programmatically
+- On childrenless Scrollchor render to `null`, useful for programmatically scroll
+- Add track to `window.location.bash` needed by browser history, `back/forward` buttons
+- Source refactored
+- Update Example and Demo
+- Update Doc
+
 ## 3.0.0
 
 - Add React 15.5.x support

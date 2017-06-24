@@ -1,6 +1,6 @@
 {
   "name": "react-scrollchor",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "A React component for scroll to #hash links with smooth animations",
   "files": [
     "lib"
@@ -16,7 +16,8 @@
     "testonly": "echo \"Error: no test specified\" && exit 1",
     "test": "npm run lint && npm run testonly",
     "prepare": "npm run build-npm",
-    "clean-install": "rm -rf node_modules && rm -rf package-lock.json && npm cache clean --force && npm install"
+    "clean-install": "npmclean && npm install",
+    "format": "prettier-eslint --write 'src/**/*.js*'"
   },
   "keywords": [
     "react",
@@ -41,7 +42,6 @@
     "babel-preset-react": "6.x.x",
     "babel-preset-stage-3": "6.x.x",
     "babel-eslint": "7.x.x",
-    "prettier-eslint-cli": "4.x.x",
     "semistandard": "*",
     "snazzy": "7.x.x",
     "fbjs": "*",
