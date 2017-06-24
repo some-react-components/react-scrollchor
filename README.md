@@ -150,10 +150,17 @@ _afterAnimate = () => {
 };
 ```
 
-
 ## Example
 
 [react-scrollchor--example](https://github.com/bySabi/react-scrollchor/tree/example)
+
+## Credits
+
+### author
+* [@bySabi](https://github.com/bySabi)
+
+### top contributors
+* [@jeanchung](https://github.com/jeanchung)
 
 ## Contributing
 
