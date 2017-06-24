@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Lorem from "react-lorem-component";
 import Scrollchor from "react-scrollchor";
-import circularIterator from "circular-iterator";
+
 
 class Sequentially extends Component {
   constructor(props) {
@@ -82,3 +82,14 @@ class App extends Component {
 }
 
 export default App;
+
+function *circularIterator(arr) {
+  let index = -1;
+  const elements = Array.isArray(arr) ? arr.slice() : [];
+  const length = elements.length;
+
+  while (length) {
+    index = (index + 1) % length;
+    yield elements[index];
+  }
+}

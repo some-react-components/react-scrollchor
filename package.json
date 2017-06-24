@@ -9,8 +9,7 @@
     "react-dom": "^15.5.4",
     "fbjs": "*",
     "react-lorem-component": "^0.10.1",
-    "react-scrollchor": "4.x.x",
-    "circular-iterator": "1.x.x"
+    "react-scrollchor": "4.x.x"
   },
   "scripts": {
     "start": "react-scripts start",
