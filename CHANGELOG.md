@@ -9,6 +9,7 @@
 - Source refactored
 - Update Example and Demo
 - Update Doc
+- Add Credits
 
 ## 3.0.0
 
