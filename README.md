@@ -100,7 +100,7 @@ export default (props) => (
 ### Reactive `props`
 Update `props` will re-render `Scrollchor` element
 
-Ex: [updating  "to" props](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L28)
+Ex: [updating  "to" prop](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L28)
 
 ## Custom animation
 
