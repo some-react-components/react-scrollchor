@@ -1,20 +1,22 @@
 {
   "name": "react-scrollchor--example",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "devDependencies": {
-    "react-scripts": "0.2.1"
+    "react-scripts": "1.x.x"
   },
   "dependencies": {
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "fbjs": "*",
     "react-lorem-component": "^0.10.1",
-    "react-scrollchor": "2.x.x"
+    "react-scrollchor": "4.x.x",
+    "circular-iterator": "1.x.x"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier-eslint --write 'src/**/*.js*'"
   },
   "eslintConfig": {
     "extends": "./node_modules/react-scripts/config/eslint.js"
