@@ -1,0 +1,12 @@
+Projects builded with react-scripts need a little love to make it browseable from a github 'gh-pages' branchs.
+
+1- Remove 'service-worker.js'
+2- Edit index.html and replace paths like:
+  src="/static/...    
+    with 
+  src="static/...
+3- Edit main.$ANY.js file a search for a patterns like this:
+    e.exports=n.p+"static/media/logo.5d5d9eef.svg"}
+      remove "n.p" part. Ex
+    e.exports="static/media/logo.5d5d9eef.svg"}
+4- Rendered 'gh-pages' are cached by Github, wait a little to see changes
