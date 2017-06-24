@@ -73,8 +73,8 @@ export default (props) => (
      * id attribute of target DOM node
      * - `#` can be omited
      * - let it blank, `to = ''`, for scroll to page top
-   * - this prop it's required
-  */
+     * - this prop it's required
+     */
     to: PropTypes.string.isRequired,
 
     /**
