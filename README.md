@@ -97,7 +97,7 @@ export default (props) => (
     afterAnimate: PropTypes.func
 }
 ```
-### Resposive `props`
+### Reactive `props`
 Update `props` will re-render `Scrollchor` element
 
 Ex: [updating  "to" props](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L28)
