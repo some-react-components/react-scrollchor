@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { animateScroll } from "./utils";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { animateScroll } from './utils';
 
 export default class Scrollchor extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ export default class Scrollchor extends React.Component {
   };
 
   _setup = props => {
-    this._to = (props.to && props.to.replace(/^#/, "")) || "";
+    this._to = (props.to && props.to.replace(/^#/, '')) || '';
     const {
       // default animate object
       offset = 0,
@@ -50,7 +50,7 @@ export default class Scrollchor extends React.Component {
 
     return !this.props.children
       ? null
-      : <a {...props} href={"#" + this._to} onClick={this._handleClick} />;
+      : <a {...props} href={'#' + this._to} onClick={this._handleClick} />;
   }
 }
 

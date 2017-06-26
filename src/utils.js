@@ -1,4 +1,4 @@
-import warning from "fbjs/lib/warning";
+import warning from 'fbjs/lib/warning';
 
 export function animateScroll(id, animate) {
   const element = id ? document.getElementById(id) : document.body;
@@ -14,7 +14,10 @@ export function animateScroll(id, animate) {
     const elapsed = elapsedTime + increment;
     const position = easing(null, elapsed, start, change, duration);
     setScrollTop(position);
-    elapsed < duration && setTimeout(() => animateFn(elapsed), increment);
+    elapsed < duration &&
+      setTimeout(function() {
+        animateFn(elapsed);
+      }, increment);
   }
 
   animateFn();
