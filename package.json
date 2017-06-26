@@ -17,7 +17,7 @@
     "test": "npm run lint && npm run testonly",
     "prepare": "npm run build-npm",
     "clean-install": "npmclean && npm install",
-    "format": "prettier-eslint --write 'src/**/*.js*'"
+    "format": "prettier-eslint --single-quote --write 'src/**/*.js*'"
   },
   "keywords": [
     "react",
