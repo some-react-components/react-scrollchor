@@ -137,12 +137,11 @@ Ex: [using simulateClick](https://github.com/bySabi/react-scrollchor/blob/exampl
 When used programmatically some use-case don't need `anchor tags`. On this cases use childrenless `Scrollchor`
 
 ### Childrenless  `Scrollchor`
-This component will render `null` and the user it's reponsible of store the component [reference](https://facebook.github.io/react/docs/refs-and-the-dom.html)
-Ex: [(childrenless)](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L24)
+This component will render `null` and the user it's reponsible of store the component [reference](https://facebook.github.io/react/docs/refs-and-the-dom.html), Ex: [childrenless](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L24)
 ```js
 <Scrollchor ref={ref => (this._back = ref)} to="_back" />
 ```
-Ex: [(calling `simulateClick()` on childrenless `ref`)](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L17)
+Ex: [calling `simulateClick()` on childrenless `ref`](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L17)
 ```js
 _afterAnimate = () => {
   this.setState({ to: this._iterator.next().value });
