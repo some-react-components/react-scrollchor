@@ -159,8 +159,8 @@ _afterAnimate = () => {
 ### author
 * [@bySabi](https://github.com/bySabi)
 
-### top contributors
-* [@jeanchung](https://github.com/jeanchung)
+### contributors
+* Jean Chung <> [@jeanchung](https://github.com/jeanchung)
 
 ## Contributing
 
