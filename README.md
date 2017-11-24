@@ -95,6 +95,12 @@ export default (props) => (
      * @param1 Received click event
      */
     afterAnimate: PropTypes.func
+
+    /**
+     * enable/disable update browser history with scroll behaviours
+     * Default to `false`
+     */
+    disableHistory: PropTypes.bool
 }
 ```
 ### Reactive `props`

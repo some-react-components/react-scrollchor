@@ -1,6 +1,6 @@
 import warning from 'fbjs/lib/warning';
 
-export function animateScroll(id, animate) {
+export function animateScroll (id, animate) {
   const element = id ? document.getElementById(id) : document.body;
   warning(element, `Cannot find element: #${id}`);
 
@@ -9,31 +9,35 @@ export function animateScroll(id, animate) {
   const to = getOffsetTop(element) + offset;
   const change = to - start;
 
-  function animateFn(elapsedTime = 0) {
+  function animateFn (elapsedTime = 0) {
     const increment = 20;
     const elapsed = elapsedTime + increment;
     const position = easing(null, elapsed, start, change, duration);
     setScrollTop(position);
     elapsed < duration &&
-      setTimeout(function() {
+      setTimeout(function () {
         animateFn(elapsed);
       }, increment);
   }
 
   animateFn();
+  return id;
+}
+
+export function updateHistory (id) {
   window.location.hash = id;
 }
 
-function getScrollTop() {
+function getScrollTop () {
   // like jQuery -> $('html, body').scrollTop
   return document.documentElement.scrollTop || document.body.scrollTop;
 }
 
-function setScrollTop(position) {
+function setScrollTop (position) {
   document.documentElement.scrollTop = document.body.scrollTop = position;
 }
 
-function getOffsetTop(element) {
+function getOffsetTop (element) {
   const { top } = element.getBoundingClientRect();
   return top + getScrollTop();
 }

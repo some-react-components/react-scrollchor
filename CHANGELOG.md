@@ -1,5 +1,9 @@
 ## master (unreleased)
 
+## 4.1.0
+
+- Add `disableHistory` prop for enable/disable update browser history with scroll behaviours. Default is `false`
+
 ## 4.0.0
 
 - Add support to changeable props. All props become responsive
