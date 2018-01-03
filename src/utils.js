@@ -1,4 +1,5 @@
 import warning from 'fbjs/lib/warning';
+import {setTimeout} from 'requestanimationframe-timer';
 
 export function animateScroll (id, animate) {
   const element = id ? document.getElementById(id) : document.body;
