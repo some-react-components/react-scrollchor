@@ -1,5 +1,9 @@
 ## master (unreleased)
 
+## 4.2.0
+
+- Implemented animation using `requestAnimationFrame`. Thanks to @kambing86 PR
+
 ## 4.1.0
 
 - Add `disableHistory` prop for enable/disable update browser history with scroll behaviours. Default is `false`
