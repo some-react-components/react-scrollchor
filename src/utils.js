@@ -5,6 +5,10 @@ export function animateScroll (id, animate) {
   const element = id ? document.getElementById(id) : document.body;
   warning(element, `Cannot find element: #${id}`);
 
+  if (!element) {
+    return null
+  }
+
   const { offset, duration, easing } = animate;
   const start = getScrollTop();
   const to = getOffsetTop(element) + offset;
@@ -39,6 +43,9 @@ function setScrollTop (position) {
 }
 
 function getOffsetTop (element) {
+  if (!element) {
+    return
+  }
   const { top } = element.getBoundingClientRect();
   return top + getScrollTop();
 }
