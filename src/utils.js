@@ -43,9 +43,6 @@ function setScrollTop (position) {
 }
 
 function getOffsetTop (element) {
-  if (!element) {
-    return
-  }
   const { top } = element.getBoundingClientRect();
   return top + getScrollTop();
 }
