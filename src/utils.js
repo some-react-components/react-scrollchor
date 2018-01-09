@@ -6,7 +6,7 @@ export function animateScroll (id, animate) {
   warning(element, `Cannot find element: #${id}`);
 
   if (!element) {
-    return null
+    return null;
   }
 
   const { offset, duration, easing } = animate;
