@@ -1,5 +1,9 @@
 ## master (unreleased)
 
+## 4.2.1
+
+- Prevent error when clicking a link to an anchor that does not exist. Thanks to @SBRK contribution
+
 ## 4.2.0
 
 - Implemented animation using `requestAnimationFrame`. Thanks to @kambing86 PR

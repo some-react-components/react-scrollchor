@@ -167,6 +167,7 @@ _afterAnimate = () => {
 ### contributors
 * Jean Chung <> [@jeanchung](https://github.com/jeanchung)
 * Chua Kang Ming <> [@kambing86](https://github.com/kambing86)
+* Benjamin MICHEL <> [@SBRK](https://github.com/SBRK)
 
 ## Contributing
 
