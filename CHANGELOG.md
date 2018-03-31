@@ -3,7 +3,7 @@
 ## 4.3.0
 
 - Add support for React 16.3.x new API
-- Prevent warnning on React 16.3.x deprecated `componentWillReceiveProps`
+- Prevent warning on React 16.3.x deprecated `componentWillReceiveProps`
 
 ## 4.2.1
 
