@@ -1,6 +1,6 @@
 {
   "name": "react-scrollchor",
-  "version": "4.3.0",
+  "version": "5.0.0",
   "description": "A React component for scroll to #hash links with smooth animations",
   "files": [
     "lib"
@@ -30,11 +30,10 @@
     "animate"
   ],
   "peerDependencies": {
-    "react": ">=15.0.0",
-    "fbjs": "*"
+    "react": ">=15.0.0"
   },
   "dependencies": {
-    "requestanimationframe-timer": "^1.0.2"
+    "requestanimationframe-timer": "1.x.x"
   },
   "devDependencies": {
     "babel-cli": "6.x.x",
@@ -42,13 +41,10 @@
     "babel-plugin-transform-class-properties": "6.x.x",
     "babel-plugin-transform-export-extensions": "6.x.x",
     "babel-plugin-transform-object-rest-spread": "6.x.x",
-    "babel-preset-es2015": "6.x.x",
+    "babel-preset-env": "1.x.x",
     "babel-preset-react": "6.x.x",
     "babel-preset-stage-3": "6.x.x",
-    "fbjs": "*",
     "mkdirp": "*",
-    "prop-types": "15.x.x",
-    "react": "16.x.x",
     "rimraf": "2.x.x",
     "semistandard": "*",
     "snazzy": "7.x.x"

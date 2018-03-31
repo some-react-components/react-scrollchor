@@ -7,7 +7,6 @@ export default class Scrollchor extends React.Component {
     super(props);
     this.state = Scrollchor._stateHelper(props);
     this.simulateClick = this._handleClick;
-    isReact16_3() && delete Scrollchor.prototype.componentWillReceiveProps;
   }
 
   static propTypes = {
@@ -72,9 +71,7 @@ function easeOutQuad (x, t, b, c, d) {
   return -c * (t /= d) * (t - 2) + b;
 }
 
-// Check for React version 16.3.x and beyond
-function isReact16_3 () { // eslint-disable-line camelcase
-  const reSemver = /^v?((\d+)\.(\d+)\.(\d+))(?:-([\dA-Za-z\-]+(?:\.[\dA-Za-z\-]+)*))?(?:\+([\dA-Za-z\-]+(?:\.[\dA-Za-z\-]+)*))?$/; // eslint-disable-line no-useless-escape
-  const [,, major, minor] = reSemver.exec(React.version);
-  return major >= 16 && minor >= 3;
-}
+// Setup for React version 16.3.x and beyond
+const reSemver = /^v?((\d+)\.(\d+)\.(\d+))(?:-([\dA-Za-z\-]+(?:\.[\dA-Za-z\-]+)*))?(?:\+([\dA-Za-z\-]+(?:\.[\dA-Za-z\-]+)*))?$/; // eslint-disable-line no-useless-escape
+const [,, major, minor] = reSemver.exec(React.version);
+major >= 16 && minor >= 3 && delete Scrollchor.prototype.componentWillReceiveProps;

@@ -1,6 +1,6 @@
 ## master (unreleased)
 
-## 4.3.0
+## 5.0.0
 
 - Add support for React 16.3.x new API
 - Prevent warning on React 16.3.x deprecated `componentWillReceiveProps`
