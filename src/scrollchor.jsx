@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { animateScroll, updateHistory } from './utils';
+import { animateScroll, updateHistory } from './helpers';
 
 export default class Scrollchor extends React.Component {
   constructor (props) {
     super(props);
-    this._setup(props);
+    this.state = Scrollchor._stateHelper(props);
     this.simulateClick = this._handleClick;
+    isReact16_3() && delete Scrollchor.prototype.componentWillReceiveProps;
   }
 
   static propTypes = {
@@ -21,34 +22,39 @@ export default class Scrollchor extends React.Component {
     disableHistory: PropTypes.bool
   }
 
-  _setup = props => {
-    this._to = (props.to && props.to.replace(/^#/, '')) || '';
+  static _stateHelper (props) {
     const {
       // default animate object
       offset = 0,
       duration = 400,
       easing = easeOutQuad
-    } =
-      props.animate || {};
-    this._animate = { offset, duration, easing };
-    this._beforeAnimate = props.beforeAnimate || function () {};
-    this._afterAnimate = props.afterAnimate || function () {};
-    this._disableHistory = props.disableHistory;
+    } = props.animate || {};
+    return {
+      to: (props.to && props.to.replace(/^#/, '')) || '',
+      animate: { offset, duration, easing },
+      beforeAnimate: props.beforeAnimate || function () {},
+      afterAnimate: props.afterAnimate || function () {},
+      disableHistory: props.disableHistory
+    };
   }
 
-  _handleClick = event => {
-    this._beforeAnimate(event);
+  _handleClick = (event) => {
+    this.state.beforeAnimate(event);
     event && event.preventDefault();
-    const id = animateScroll(this._to, this._animate);
+    const id = animateScroll(this.state.to, this.state.animate);
 
     if (id) {
-      this._disableHistory || updateHistory(id);
-      this._afterAnimate(event);
+      this.state.disableHistory || updateHistory(id);
+      this.state.afterAnimate(event);
     }
   }
 
+  static getDerivedStateFromProps (props) {
+    return Scrollchor._stateHelper(props);
+  }
+
   componentWillReceiveProps (props) {
-    this._setup(props);
+    this.setState(Scrollchor._stateHelper(props));
   }
 
   render () {
@@ -64,4 +70,11 @@ export default class Scrollchor extends React.Component {
 // jQuery easing 'swing'
 function easeOutQuad (x, t, b, c, d) {
   return -c * (t /= d) * (t - 2) + b;
+}
+
+// Check for React version 16.3.x and beyond
+function isReact16_3 () { // eslint-disable-line camelcase
+  const reSemver = /^v?((\d+)\.(\d+)\.(\d+))(?:-([\dA-Za-z\-]+(?:\.[\dA-Za-z\-]+)*))?(?:\+([\dA-Za-z\-]+(?:\.[\dA-Za-z\-]+)*))?$/; // eslint-disable-line no-useless-escape
+  const [,, major, minor] = reSemver.exec(React.version);
+  return major >= 16 && minor >= 3;
 }
