@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import Scrollchor from "react-scrollchor";
 import logo from "./logo.svg";
 import "./App.css";
-import Scrollchor from "react-scrollchor";
+
 
 class Sequentially extends Component {
   constructor(props) {
