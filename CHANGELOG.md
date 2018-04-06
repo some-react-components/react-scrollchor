@@ -1,5 +1,10 @@
 ## master (unreleased)
 
+## 5.0.1
+
+- Fix a state bug introduced on release `5.0.0`
+- `animateScroll` is now asynchronous, thanks to @xehpuk PR
+
 ## 5.0.0
 
 - Add support for React 16.3.x new API
