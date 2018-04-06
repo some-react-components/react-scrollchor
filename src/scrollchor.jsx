@@ -18,7 +18,8 @@ export default class Scrollchor extends React.Component {
     }),
     beforeAnimate: PropTypes.func,
     afterAnimate: PropTypes.func,
-    disableHistory: PropTypes.bool
+    disableHistory: PropTypes.bool,
+    children: PropTypes.node
   }
 
   static _stateHelper (props) {
@@ -40,12 +41,11 @@ export default class Scrollchor extends React.Component {
   _handleClick = (event) => {
     this.state.beforeAnimate(event);
     event && event.preventDefault();
-    const id = animateScroll(this.state.to, this.state.animate);
-
-    if (id) {
-      this.state.disableHistory || updateHistory(id);
-      this.state.afterAnimate(event);
-    }
+    animateScroll(this.state.to, this.state.animate)
+      .then((id) => {
+        this.state.disableHistory || updateHistory(id);
+        this.state.afterAnimate(event);
+      });
   }
 
   static getDerivedStateFromProps (props) {
