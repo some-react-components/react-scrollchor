@@ -18,7 +18,8 @@ export default class Scrollchor extends React.Component {
     }),
     beforeAnimate: PropTypes.func,
     afterAnimate: PropTypes.func,
-    disableHistory: PropTypes.bool
+    disableHistory: PropTypes.bool,
+    children: PropTypes.node
   }
 
   static _stateHelper (props) {
