@@ -1,7 +1,7 @@
 import { setTimeout } from 'requestanimationframe-timer';
 
 export function animateScroll (id, animate) {
-  return new Promise(((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const element = id ? document.getElementById(id) : document.body;
 
     if (!element) {
@@ -23,12 +23,12 @@ export function animateScroll (id, animate) {
           animateFn(elapsed);
         }, increment);
       } else {
-        return resolve();
+        return resolve(id);
       }
     }
 
     animateFn();
-  }))
+  });
 }
 
 export function updateHistory (id) {
