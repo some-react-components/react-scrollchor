@@ -40,12 +40,11 @@ export default class Scrollchor extends React.Component {
   _handleClick = (event) => {
     this.state.beforeAnimate(event);
     event && event.preventDefault();
-    const id = animateScroll(this.state.to, this.state.animate);
-
-    if (id) {
-      this.state.disableHistory || updateHistory(id);
-      this.state.afterAnimate(event);
-    }
+    animateScroll(this.state.to, this.state.animate)
+      .then(() => {
+        this.state.disableHistory || updateHistory(id);
+        this.state.afterAnimate(event);
+      });
   }
 
   static getDerivedStateFromProps (props) {

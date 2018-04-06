@@ -29,10 +29,6 @@ npm install react-scrollchor --save
 * User should provide their own `React` package
 
 
-#### `fbjs` package
-[fbjs](https://www.npmjs.com/package/fbjs) is a collection of utility libraries created by React Team. It include useful modules like `warning` and `invariant`
-
-
 ## Usage
 
 ```js
