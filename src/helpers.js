@@ -39,7 +39,7 @@ export const animateScroll = (function () {
       resolvePrevious = resolve;
       animateFn();
     });
-  }
+  };
 })();
 
 export function updateHistory (id) {
