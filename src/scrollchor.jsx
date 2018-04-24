@@ -43,8 +43,10 @@ export default class Scrollchor extends React.Component {
     event && event.preventDefault();
     animateScroll(this.state.to, this.state.animate)
       .then((id) => {
-        this.state.disableHistory || updateHistory(id);
-        this.state.afterAnimate(event);
+        if (id) {
+          this.state.disableHistory || updateHistory(id);
+          this.state.afterAnimate(event);
+        }
       });
   }
 
