@@ -1,35 +1,46 @@
-import { setTimeout } from 'requestanimationframe-timer';
+import { setTimeout, clearTimeout } from 'requestanimationframe-timer';
 
-export function animateScroll (id, animate) {
-  return new Promise((resolve, reject) => {
-    const element = id ? document.getElementById(id) : document.body;
+export const animateScroll = (function () {
+  let timeoutId;
+  let resolvePrevious;
 
-    if (!element) {
-      return reject(`Cannot find element: #${id}`);
-    }
+  return function animateScroll (id, animate) {
+    return new Promise((resolve, reject) => {
+      const element = id ? document.getElementById(id) : document.body;
 
-    const { offset, duration, easing } = animate;
-    const start = getScrollTop();
-    const to = getOffsetTop(element) + offset;
-    const change = to - start;
-
-    function animateFn (elapsedTime = 0) {
-      const increment = 20;
-      const elapsed = elapsedTime + increment;
-      const position = easing(null, elapsed, start, change, duration);
-      setScrollTop(position);
-      if (elapsed < duration) {
-        setTimeout(function () {
-          animateFn(elapsed);
-        }, increment);
-      } else {
-        return resolve(id);
+      if (!element) {
+        return reject(`Cannot find element: #${id}`);
       }
-    }
 
-    animateFn();
-  });
-}
+      const { offset, duration, easing } = animate;
+      const start = getScrollTop();
+      const to = getOffsetTop(element) + offset;
+      const change = to - start;
+
+      function animateFn (elapsedTime = 0) {
+        const increment = 20;
+        const elapsed = elapsedTime + increment;
+        const position = easing(null, elapsed, start, change, duration);
+        setScrollTop(position);
+        if (elapsed < duration) {
+          timeoutId = setTimeout(function () {
+            animateFn(elapsed);
+          }, increment);
+        } else {
+          timeoutId = undefined;
+          return resolve(id);
+        }
+      }
+
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+        resolvePrevious();
+      }
+      resolvePrevious = resolve;
+      animateFn();
+    });
+  };
+})();
 
 export function updateHistory (id) {
   window.location.hash = id;
