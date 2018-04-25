@@ -45,9 +45,7 @@
     "babel-preset-react": "6.x.x",
     "babel-preset-stage-3": "6.x.x",
     "mkdirp": "*",
-    "rimraf": "2.x.x",
-    "semistandard": "*",
-    "snazzy": "7.x.x"
+    "rimraf": "2.x.x"
   },
   "semistandard": {
     "parser": "babel-eslint"
