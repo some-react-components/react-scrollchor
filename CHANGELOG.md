@@ -1,5 +1,9 @@
 ## master (unreleased)
 
+## 5.0.2
+
+- Now each `Scrollchor` instance has its own `animateScroll` function that track animation state and eliminates the possibility of multiple animations interfering with each other, thanks to @xehpuk PR
+
 ## 5.0.1
 
 - Fix a state bug introduced on release `5.0.0`

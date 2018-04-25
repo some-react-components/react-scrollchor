@@ -1,6 +1,6 @@
 {
   "name": "react-scrollchor",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "A React component for scroll to #hash links with smooth animations",
   "files": [
     "lib"
@@ -14,7 +14,7 @@
     "build-npm": "rimraf lib && mkdirp lib && babel src/ -d lib/",
     "lint": "semistandard --fix --verbose | snazzy",
     "testonly": "echo \"Error: no test specified\" && exit 1",
-    "test": "npm run lint && npm run testonly",
+    "test": "npm run testonly",
     "prepare": "npm run build-npm",
     "clean-install": "npmclean && npm install",
     "format": "prettier-eslint --single-quote --write '**/*.+(js|jsx)'"
