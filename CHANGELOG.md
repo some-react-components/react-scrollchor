@@ -1,5 +1,10 @@
 ## master (unreleased)
 
+## 5.1.0
+
+- Replace internal function `updateHistory` implementation for prevent scroll jumps on browser history update
+
+
 ## 5.0.2
 
 - Now each `Scrollchor` instance has its own `animateScroll` function that track animation state and eliminates the possibility of multiple animations interfering with each other, thanks to @xehpuk PR

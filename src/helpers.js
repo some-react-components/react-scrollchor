@@ -43,7 +43,13 @@ export const animateScroll = (function () {
 })();
 
 export function updateHistory (id) {
-  window.location.hash = id;
+  id = '#' + id;
+  if (history.pushState) {
+    history.pushState(null, null, id);
+  }
+  else {
+    location.hash = id;
+  }
 }
 
 function getScrollTop () {
