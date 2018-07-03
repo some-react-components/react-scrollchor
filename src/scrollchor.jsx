@@ -22,6 +22,10 @@ export default class Scrollchor extends React.Component {
     children: PropTypes.node
   }
 
+  static _normalizeId (id) {
+    return (id && id.replace(/^#/, '')) || ''
+  }
+
   static _stateHelper (props) {
     const {
       // default animate object
@@ -30,7 +34,8 @@ export default class Scrollchor extends React.Component {
       easing = easeOutQuad
     } = props.animate || {};
     return {
-      to: (props.to && props.to.replace(/^#/, '')) || '',
+      to: Scrollchor._normalizeId(props.to),
+      target: Scrollchor._normalizeId(props.target),
       animate: { offset, duration, easing },
       beforeAnimate: props.beforeAnimate || function () {},
       afterAnimate: props.afterAnimate || function () {},
@@ -41,7 +46,7 @@ export default class Scrollchor extends React.Component {
   _handleClick = (event) => {
     this.state.beforeAnimate(event);
     event && event.preventDefault();
-    animateScroll(this.state.to, this.state.animate)
+    animateScroll(this.state.to, this.state.target, this.state.animate)
       .then((id) => {
         if (id) {
           this.state.disableHistory || updateHistory(id);
@@ -59,7 +64,7 @@ export default class Scrollchor extends React.Component {
   }
 
   render () {
-    const { to, animate, beforeAnimate, afterAnimate, disableHistory, ...props } = this.props; // eslint-disable-line no-unused-vars
+    const { to, target, animate, beforeAnimate, afterAnimate, disableHistory, ...props } = this.props; // eslint-disable-line no-unused-vars
 
     return !this.props.children
       ? null

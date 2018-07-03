@@ -4,12 +4,32 @@ export const animateScroll = (function () {
   let timeoutId;
   let resolvePrevious;
 
-  return function animateScroll (id, animate) {
+  return function animateScroll (id, targetId, animate) {
+    let targetElement = document.getElementById(targetId);
+    if (!targetElement) {
+      targetElement = 'scrollTop' in document.documentElement
+        ? document.documentElement
+        : document.body;
+    }
+
+    function getScrollTop () {
+      // like jQuery -> $('html, body').scrollTop
+      return targetElement.scrollTop;
+    }
+
+    function setScrollTop (position) {
+      targetElement.scrollTop = position;
+    }
+
     return new Promise((resolve, reject) => {
       const element = id ? document.getElementById(id) : document.body;
 
       if (!element) {
         return reject(`Cannot find element: #${id}`);
+      }
+
+      function getOffsetTop () {
+        return element.getBoundingClientRect().top - targetElement.getBoundingClientRect().top + getScrollTop();
       }
 
       const { offset, duration, easing } = animate;
@@ -39,29 +59,14 @@ export const animateScroll = (function () {
       resolvePrevious = resolve;
       animateFn();
     });
-  }
+  };
 })();
 
 export function updateHistory (id) {
   id = '#' + id;
   if (history.pushState) {
     history.pushState(null, null, id);
-  }
-  else {
+  } else {
     location.hash = id;
   }
-}
-
-function getScrollTop () {
-  // like jQuery -> $('html, body').scrollTop
-  return document.documentElement.scrollTop || document.body.scrollTop;
-}
-
-function setScrollTop (position) {
-  document.documentElement.scrollTop = document.body.scrollTop = position;
-}
-
-function getOffsetTop (element) {
-  const { top } = element.getBoundingClientRect();
-  return top + getScrollTop();
 }
