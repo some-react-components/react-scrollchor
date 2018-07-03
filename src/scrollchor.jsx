@@ -23,7 +23,7 @@ export default class Scrollchor extends React.Component {
   }
 
   static _normalizeId (id) {
-    return (id && id.replace(/^#/, '')) || ''
+    return (id && id.replace(/^#/, '')) || '';
   }
 
   static _stateHelper (props) {

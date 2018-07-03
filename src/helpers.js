@@ -25,7 +25,7 @@ export const animateScroll = (function () {
       const element = id ? document.getElementById(id) : document.body;
 
       if (!element) {
-        return reject(`Cannot find element: #${id}`);
+        return reject(new Error(`Cannot find element: #${id}`));
       }
 
       function getOffsetTop () {

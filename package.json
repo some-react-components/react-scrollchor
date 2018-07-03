@@ -48,7 +48,8 @@
     "rimraf": "2.x.x"
   },
   "semistandard": {
-    "parser": "babel-eslint"
+    "parser": "babel-eslint",
+    "global": ["history", "location"]
   },
   "author": "bySabi Files",
   "license": "ISC"
