@@ -5,20 +5,21 @@ export const animateScroll = (function () {
   let resolvePrevious;
 
   return function animateScroll (id, targetId, animate) {
-    let targetElement = document.getElementById(targetId);
-    if (!targetElement) {
-      targetElement = 'scrollTop' in document.documentElement
-        ? document.documentElement
-        : document.body;
-    }
+    const targetElement = document.getElementById(targetId);
 
     function getScrollTop () {
       // like jQuery -> $('html, body').scrollTop
-      return targetElement.scrollTop;
+      return targetElement
+        ? targetElement.scrollTop
+        : document.documentElement.scrollTop || document.body.scrollTop;
     }
 
     function setScrollTop (position) {
-      targetElement.scrollTop = position;
+      if (targetElement) {
+        targetElement.scrollTop = position;
+      } else {
+        document.documentElement.scrollTop = document.body.scrollTop = position;
+      }
     }
 
     return new Promise((resolve, reject) => {
@@ -29,7 +30,10 @@ export const animateScroll = (function () {
       }
 
       function getOffsetTop () {
-        return element.getBoundingClientRect().top - targetElement.getBoundingClientRect().top + getScrollTop();
+        const parentOffsetTop = targetElement
+          ? targetElement.getBoundingClientRect().top
+          : 0;
+        return element.getBoundingClientRect().top - parentOffsetTop + getScrollTop();
       }
 
       const { offset, duration, easing } = animate;

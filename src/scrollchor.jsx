@@ -11,6 +11,7 @@ export default class Scrollchor extends React.Component {
 
   static propTypes = {
     to: PropTypes.string.isRequired,
+    target: PropTypes.string,
     animate: PropTypes.shape({
       offset: PropTypes.number,
       duration: PropTypes.number,
