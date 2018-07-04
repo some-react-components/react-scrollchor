@@ -2,15 +2,15 @@
 
 [![npm version](https://badge.fury.io/js/react-scrollchor.svg)](https://badge.fury.io/js/react-scrollchor)
 [![npm downloads](https://img.shields.io/npm/dm/react-scrollchor.svg?style=flat-square)](https://www.npmjs.com/package/react-scrollchor)
-[![bitHound Overall Score](https://www.bithound.io/github/bySabi/react-scrollchor/badges/score.svg)](https://www.bithound.io/github/bySabi/react-scrollchor)
+[![bitHound Overall Score](https://www.bithound.io/github/some-react-components/react-scrollchor/badges/score.svg)](https://www.bithound.io/github/bySabi/react-scrollchor)
 [![Donate](https://img.shields.io/badge/$-support-green.svg?style=flat-square)](https://paypal.me/bySabi/10)
 
 > A React component for scroll to `#hash` links with smooth animations.
 > Scrollchor is a mix of `Scroll` and `Anchor`, a joke name for a useful component.
 
 See it in action:
-* demo [video](https://github.com/bySabi/react-scrollchor/blob/example/demo/scrollchor.webm?raw=true)
-* example [page](https://bySabi.github.com/react-scrollchor/) and [source code](https://github.com/bySabi/react-scrollchor/tree/example)
+* demo [video](https://github.com/some-react-components/react-scrollchor/blob/example/demo/scrollchor.webm?raw=true)
+* example [page](https://some-react-components.github.com/react-scrollchor/) and [source code](https://github.com/some-react-components/react-scrollchor/tree/example)
 
 
 `hash` is the `id` of a HTML tag on current page.
@@ -102,7 +102,7 @@ export default (props) => (
 ### Reactive `props`
 Update `props` will re-render `Scrollchor` element
 
-Ex: [updating  "to" prop](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L28)
+Ex: [updating  "to" prop](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L28)
 
 ## Custom animation
 
@@ -134,16 +134,16 @@ Use this callbacks to trigger behaviours like, for example, update state, load a
 ## Simulate click API
 Scrollchor include a dedicate API for init animate scroll programmatically that works like normal click events using `simulateClick()`
 
-Ex: [using simulateClick](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L17)
+Ex: [using simulateClick](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L17)
 
 When used programmatically some use-case don't need `anchor tags`. On this cases use childrenless `Scrollchor`
 
 ### Childrenless  `Scrollchor`
-This component will render `null` and the user it's reponsible of store the component [reference](https://facebook.github.io/react/docs/refs-and-the-dom.html), Ex: [childrenless](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L24)
+This component will render `null` and the user it's reponsible of store the component [reference](https://facebook.github.io/react/docs/refs-and-the-dom.html), Ex: [childrenless](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L24)
 ```js
 <Scrollchor ref={ref => (this._back = ref)} to="_back" />
 ```
-Ex: [calling `simulateClick()` on childrenless `ref`](https://github.com/bySabi/react-scrollchor/blob/example/src/App.js#L17)
+Ex: [calling `simulateClick()` on childrenless `ref`](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L17)
 ```js
 _afterAnimate = () => {
   this.setState({ to: this._iterator.next().value });
@@ -153,18 +153,20 @@ _afterAnimate = () => {
 
 ## Example
 
-[react-scrollchor--example](https://github.com/bySabi/react-scrollchor/tree/example)
+[react-scrollchor--example](https://github.com/some-react-components/react-scrollchor/tree/example)
 
 ## Credits
 
 ### author
 * [@bySabi](https://github.com/bySabi)
 
+### maintainers
+* [@xehpuk](https://github.com/xehpuk)
+
 ### contributors
 * Jean Chung <> [@jeanchung](https://github.com/jeanchung)
 * Chua Kang Ming <> [@kambing86](https://github.com/kambing86)
 * Benjamin MICHEL <> [@SBRK](https://github.com/SBRK)
-* [@xehpuk](https://github.com/xehpuk)
 
 ## Contributing
 
