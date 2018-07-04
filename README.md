@@ -2,7 +2,6 @@
 
 [![npm version](https://badge.fury.io/js/react-scrollchor.svg)](https://badge.fury.io/js/react-scrollchor)
 [![npm downloads](https://img.shields.io/npm/dm/react-scrollchor.svg?style=flat-square)](https://www.npmjs.com/package/react-scrollchor)
-[![bitHound Overall Score](https://www.bithound.io/github/some-react-components/react-scrollchor/badges/score.svg)](https://www.bithound.io/github/bySabi/react-scrollchor)
 [![Donate](https://img.shields.io/badge/$-support-green.svg?style=flat-square)](https://paypal.me/bySabi/10)
 
 > A React component for scroll to `#hash` links with smooth animations.
@@ -158,10 +157,10 @@ _afterAnimate = () => {
 ## Credits
 
 ### author
-* [@bySabi](https://github.com/bySabi)
+* bySabi Files <> [@bySabi](https://github.com/bySabi)
 
 ### maintainers
-* [@xehpuk](https://github.com/xehpuk)
+* xehpuk <> [@xehpuk](https://github.com/xehpuk)
 
 ### contributors
 * Jean Chung <> [@jeanchung](https://github.com/jeanchung)
