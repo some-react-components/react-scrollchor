@@ -17,12 +17,13 @@ class Sequentially extends Component {
   };
 
   render() {
-    const { children, top, ...props } = this.props; // eslint-disable-line no-unused-vars
+    const { children, top, target, ...props } = this.props; // eslint-disable-line no-unused-vars
     return (
       <div>
-        <Scrollchor ref={ref => (this._back = ref)} to="_back" />
+        <Scrollchor ref={ref => (this._back = ref)} to="_back" target={target}/>
         <Scrollchor
           id="_back"
+          target={target}
           {...props}
           to={this.state.to}
           afterAnimate={this._afterAnimate}
@@ -43,18 +44,15 @@ class App extends Component {
         </div>
 
         <div id="page-wrap">
-
           <h1 id="top">
-            Smooth Page Scrolling with<strong id="scroll-chor">
-              Scrollchor
-            </strong>
+            Smooth Page Scrolling with <strong id="scroll-chor">Scrollchor</strong>
           </h1>
 
           <ul>
-            <li><Scrollchor to="#two">Scroll to Section Two</Scrollchor></li>
-            <li><Scrollchor to="three">Scroll to Section Three</Scrollchor></li>
+            <li><Scrollchor to="#two" target="page-wrap">Scroll to Section Two</Scrollchor></li>
+            <li><Scrollchor to="three" target="page-wrap">Scroll to Section Three</Scrollchor></li>
             <li>
-              <Sequentially>
+              <Sequentially target="page-wrap">
                 {to =>
                   <span>
                     Scroll sequentially to Section{" "}
@@ -68,11 +66,11 @@ class App extends Component {
           <Lorem />
 
           <h1 id="two">Section Two</h1>
-          <p><Scrollchor to="#top">Top</Scrollchor></p>
+          <p><Scrollchor to="#top" target="page-wrap">Top</Scrollchor></p>
           <Lorem />
 
           <h1 id="three">Section Three</h1>
-          <p><Scrollchor to="">Home</Scrollchor></p>
+          <p><Scrollchor to="#top" target="page-wrap">Top</Scrollchor></p>
           <Lorem />
         </div>
       </div>

@@ -26,6 +26,8 @@
 #page-wrap {
   width: 600px;
   margin: 60px auto;
+  height: calc(100vh - 245px);
+  overflow: auto;
 }
 
 #page-wrap ul {
@@ -39,7 +41,6 @@
   margin: 20px;
 }
 
-
 #scroll-chor {
   padding: 2px;
   padding-right: 6px;
@@ -47,4 +48,3 @@
   background-color: #222;
   font-style: oblique;
 }
-
