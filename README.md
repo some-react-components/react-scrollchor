@@ -65,15 +65,22 @@ export default (props) => (
   propTypes: {
 
     /**
-     * id attribute of target DOM node
-     * - `#` can be omited
+     * id attribute of the target DOM node
+     * - `#` can be omitted
      * - let it blank, `to = ''`, for scroll to page top
-     * - this prop it's required
+     * - this prop is required
      */
     to: PropTypes.string.isRequired,
 
     /**
-     * scroll smooth animation can be customize
+     * id attribute of the scrollable DOM node
+     * - `#` can be omitted
+     * - uses the root element of the document if omitted
+     */
+    target: PropTypes.string,
+
+    /**
+     * scroll smooth animation can be customized
      * Accepted options, Ex: (default)
      *  { offset: 0, duration: 400, easing: easeOutQuad }
      */
@@ -105,7 +112,7 @@ Ex: [updating  "to" prop](https://github.com/some-react-components/react-scrollc
 
 ## Custom animation
 
-Animated behavior can be customize:
+Animation behavior can be customized:
 
 ```js
 <Scrollchor to="#aboutus" animate={{offset: 20, duration: 600}} className="nav-link">Home</Scrollchor>
@@ -125,24 +132,24 @@ This setting is equivalent to default jQuery.animate `easing: swing`
 
 
 ## `before` and `after` Animate callbacks
-Use this callbacks to trigger behaviours like, for example, update state, load async stuffs, etc.
+Use these callbacks to trigger behaviors like, for example, update state, load async stuff, etc.
 ```js
 <Scrollchor to="#aboutus" afterAnimate={() => updateState(this)}>Home</Scrollchor>
 ```
 
 ## Simulate click API
-Scrollchor include a dedicate API for init animate scroll programmatically that works like normal click events using `simulateClick()`
+Scrollchor includes a dedicate API for init animate scroll programmatically that works like normal click events using `simulateClick()`.
 
 Ex: [using simulateClick](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L17)
 
-When used programmatically some use-case don't need `anchor tags`. On this cases use childrenless `Scrollchor`
+When used programmatically, some use-cases don't need `anchor tags`. On these cases use childless `Scrollchor`.
 
-### Childrenless  `Scrollchor`
-This component will render `null` and the user it's reponsible of store the component [reference](https://facebook.github.io/react/docs/refs-and-the-dom.html), Ex: [childrenless](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L24)
+### Childless  `Scrollchor`
+This component will render `null` and the user is reponsible for storing the component [reference](https://facebook.github.io/react/docs/refs-and-the-dom.html), Ex: [childless](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L23)
 ```js
 <Scrollchor ref={ref => (this._back = ref)} to="_back" />
 ```
-Ex: [calling `simulateClick()` on childrenless `ref`](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L17)
+Ex: [calling `simulateClick()` on childless `ref`](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L16)
 ```js
 _afterAnimate = () => {
   this.setState({ to: this._iterator.next().value });
