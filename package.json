@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.x.x",
     "react-dom": "16.x.x",
-    "react-scrollchor": "github:xehpuk/react-scrollchor#master"
+    "react-scrollchor": "5.x.x"
   },
   "scripts": {
     "start": "react-scripts start",
