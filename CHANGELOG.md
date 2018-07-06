@@ -1,5 +1,13 @@
 ## master (unreleased)
 
+## 6.0.0
+
+`Scrollchor` React component now belong to `Some React Component` Organization Team. This move will ensure its future development and manteniance.
+
+- Added configurable `scrollable container` feature, `target` prop. Thanks to @xephuk dedicated effort.
+- [@xehpuk](https://github.com/xehpuk) join `React-Schollchor` Team
+- minor Doc corrections
+
 ## 5.1.0
 
 - Replace internal function `updateHistory` implementation for prevent scroll jumps on browser history update

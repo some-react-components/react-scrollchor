@@ -15,7 +15,6 @@ See it in action:
 `hash` is the `id` of a HTML tag on current page.
 
 
-
 ## Installation
 
 ### npm
@@ -108,9 +107,9 @@ export default (props) => (
 ### Reactive `props`
 Update `props` will re-render `Scrollchor` element
 
-Ex: [updating  "to" prop](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L28)
+Example: [updating  "to" prop](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L28)
 
-## Custom animation
+## Custom animations
 
 Animation behavior can be customized:
 
@@ -132,15 +131,15 @@ This setting is equivalent to default jQuery.animate `easing: swing`
 
 
 ## `before` and `after` Animate callbacks
-Use these callbacks to trigger behaviors like, for example, update state, load async stuff, etc.
+Use these callbacks to trigger behaviors like: update state, load async stuff, etc.
 ```js
 <Scrollchor to="#aboutus" afterAnimate={() => updateState(this)}>Home</Scrollchor>
 ```
 
 ## Simulate click API
-Scrollchor includes a dedicate API for init animate scroll programmatically that works like normal click events using `simulateClick()`.
+Scrollchor includes a dedicate API to do animate scroll programmatically that works like normal click events using `simulateClick()`.
 
-Ex: [using simulateClick](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L17)
+Example: [using simulateClick](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L16)
 
 When used programmatically, some use-cases don't need `anchor tags`. On these cases use childless `Scrollchor`.
 
@@ -149,7 +148,7 @@ This component will render `null` and the user is reponsible for storing the com
 ```js
 <Scrollchor ref={ref => (this._back = ref)} to="_back" />
 ```
-Ex: [calling `simulateClick()` on childless `ref`](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L16)
+Example: [calling `simulateClick()` on childless `ref`](https://github.com/some-react-components/react-scrollchor/blob/example/src/App.js#L16)
 ```js
 _afterAnimate = () => {
   this.setState({ to: this._iterator.next().value });
@@ -157,7 +156,14 @@ _afterAnimate = () => {
 };
 ```
 
-## Example
+## Scrollable ancestor container
+Scrollchor works within any scrollable parent container. The root element of the `document` will be choose if none is specified.
+
+Hosted example show how to use a different container using prop `target`.
+* Click `Within scrollable container` checkbox: [hosted example](https://some-react-components.github.io/react-scrollchor/)(full example below)
+
+
+## Full Example
 
 [react-scrollchor--example](https://github.com/some-react-components/react-scrollchor/tree/example)
 
