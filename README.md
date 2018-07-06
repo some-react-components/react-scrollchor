@@ -9,7 +9,7 @@
 
 See it in action:
 * demo [video](https://github.com/some-react-components/react-scrollchor/blob/example/demo/scrollchor.webm?raw=true)
-* example [page](https://some-react-components.github.com/react-scrollchor/) and [source code](https://github.com/some-react-components/react-scrollchor/tree/example)
+* example [page](https://some-react-components.github.io/react-scrollchor/) and [source code](https://github.com/some-react-components/react-scrollchor/tree/example)
 
 
 `hash` is the `id` of a HTML tag on current page.
