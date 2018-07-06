@@ -56,7 +56,7 @@ class App extends Component {
 
         <label id="target-checkbox"><input type="checkbox" checked={withTarget} onChange={() => this.setState({
           withTarget: !withTarget
-        })}/>With Target</label>
+        })}/>Within scrollable container</label>
 
         <div id="page-wrap" style={withTarget ? {
           height: 'calc(100vh - 245px)',
