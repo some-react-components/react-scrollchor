@@ -36,23 +36,41 @@ class Sequentially extends Component {
 }
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      withTarget: false
+    };
+  }
+
   render() {
+    const { withTarget } = this.state;
+    const target = withTarget ? 'page-wrap' : undefined;
+
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
 
-        <div id="page-wrap">
+        <label id="target-checkbox"><input type="checkbox" checked={withTarget} onChange={() => this.setState({
+          withTarget: !withTarget
+        })}/>With Target</label>
+
+        <div id="page-wrap" style={withTarget ? {
+          height: 'calc(100vh - 245px)',
+          overflow: 'auto'
+        } : undefined}>
           <h1 id="top">
             Smooth Page Scrolling with <strong id="scroll-chor">Scrollchor</strong>
           </h1>
 
           <ul>
-            <li><Scrollchor to="#two" target="page-wrap">Scroll to Section Two</Scrollchor></li>
-            <li><Scrollchor to="three" target="page-wrap">Scroll to Section Three</Scrollchor></li>
+            <li><Scrollchor to="#two" target={target}>Scroll to Section Two</Scrollchor></li>
+            <li><Scrollchor to="three" target={target}>Scroll to Section Three</Scrollchor></li>
             <li>
-              <Sequentially target="page-wrap">
+              <Sequentially target={target}>
                 {to =>
                   <span>
                     Scroll sequentially to Section{" "}
@@ -66,11 +84,11 @@ class App extends Component {
           <Lorem />
 
           <h1 id="two">Section Two</h1>
-          <p><Scrollchor to="#top" target="page-wrap">Top</Scrollchor></p>
+          <p><Scrollchor to="#top" target={target}>Top</Scrollchor></p>
           <Lorem />
 
           <h1 id="three">Section Three</h1>
-          <p><Scrollchor to="#top" target="page-wrap">Top</Scrollchor></p>
+          <p><Scrollchor to="#top" target={target}>Top</Scrollchor></p>
           <Lorem />
         </div>
       </div>

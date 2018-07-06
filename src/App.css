@@ -23,11 +23,21 @@
   to { transform: rotate(360deg); }
 }
 
+#target-checkbox {
+  position: fixed;
+  left: calc(100vw / 2 - 450px);
+  background-color: white;
+}
+
+@media (max-width: 900px) {
+  #target-checkbox {
+    left: 0;
+  }
+}
+
 #page-wrap {
   width: 600px;
   margin: 60px auto;
-  height: calc(100vh - 245px);
-  overflow: auto;
 }
 
 #page-wrap ul {
