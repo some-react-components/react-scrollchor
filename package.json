@@ -1,23 +1,22 @@
 {
   "name": "react-scrollchor",
-  "version": "6.0.0",
-  "description": "A React component for scroll to #hash links with smooth animations",
+  "version": "7.0.0",
+  "description": "A React component for scrolling to #hash links with smooth animations",
   "files": [
     "lib"
   ],
   "repository": "https://github.com/some-react-components/react-scrollchor.git",
   "main": "lib/scrollchor.js",
+  "module": "lib/scrollchor.es.js",
+  "types": "lib/index.d.ts",
   "engines": {
     "npm": ">=3.0"
   },
   "scripts": {
-    "build-npm": "rimraf lib && mkdirp lib && babel src/ -d lib/",
-    "lint": "semistandard --fix --verbose | snazzy",
-    "testonly": "echo \"Error: no test specified\" && exit 1",
-    "test": "npm run testonly",
-    "prepare": "npm run build-npm",
-    "clean-install": "npmclean && npm install",
-    "format": "prettier-eslint --single-quote --write '**/*.+(js|jsx)'"
+    "build": "rimraf lib && mkdirp lib && rollup -c",
+    "lint": "eslint src/**/*.*",
+    "test": "exit 0",
+    "release": "np"
   },
   "keywords": [
     "react",
@@ -30,35 +29,55 @@
     "animate"
   ],
   "peerDependencies": {
-    "react": ">=15.0.0"
+    "react": ">=16.8.0 || 17.x.x"
+  },
+  "optionalDependencies": {
+    "@types/react": ">=16.8.0 || 17.x.x"
   },
   "dependencies": {
-    "requestanimationframe-timer": "1.x.x"
+    "requestanimationframe-timer": "^3.0.0"
   },
   "devDependencies": {
-    "babel-cli": "6.x.x",
-    "babel-eslint": "7.x.x",
-    "babel-plugin-transform-class-properties": "6.x.x",
-    "babel-plugin-transform-export-extensions": "6.x.x",
-    "babel-plugin-transform-object-rest-spread": "6.x.x",
-    "babel-preset-env": "1.x.x",
-    "babel-preset-react": "6.x.x",
-    "babel-preset-stage-3": "6.x.x",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.15.2",
+    "@typescript-eslint/parser": "^4.15.2",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import-newlines": "^1.1.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^5.1.2",
+    "lint-staged": "^10.5.4",
     "mkdirp": "*",
-    "rimraf": "2.x.x"
-  },
-  "semistandard": {
-    "parser": "babel-eslint",
-    "global": [
-      "history",
-      "location"
-    ]
+    "np": "*",
+    "react": "^17.0.1",
+    "rimraf": "2.x.x",
+    "rollup": "^2.40.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "ts-loader": "^8.0.17",
+    "typescript": "^4.2.2"
   },
   "authors": [
     "bySabi Files <> (https://github.com/bySabi)"
   ],
   "maintainers": [
-    "xehpuk <> (https://github.com/xehpuk)"
+    "xehpuk <> (https://github.com/xehpuk)",
+    "SeinopSys <> [@SeinopSys](https://github.com/SeinopSys)"
   ],
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
+  "np": {
+    "releaseDraft": false
+  },
+  "lint-staged": {
+    "**/*": "eslint"
+  }
 }

@@ -1,5 +1,16 @@
 ## master (unreleased)
 
+## 7.0.0
+
+This new major version contains breaking changes.
+
+- Everything has been rewritten in TypeScript, which brings with it published type definitions
+- The default export has been removed in favor of a named export; `import Scrollchor` must be replaced with `import { Scrollchor }`
+- The `simulateClick()` API has been removed entirely
+- Scrollchor is now a function component and makes use of hooks introduced in React v16.8, which necessitated a minimum version bump for this `peerDependency`
+- `animation.easing` configuration is now documented and compatible with all the easing functions provided by [jquery-easing](https://github.com/danro/jquery-easing/blob/master/jquery.easing.js)
+- Added two additional built-in easing types for _ease_ of use, borrowed from jQuery (`linear`, `swing`)
+
 ## 6.0.0
 
 `Scrollchor` React component now belong to `Some React Component` Organization Team. This move will ensure its future development and manteniance.
