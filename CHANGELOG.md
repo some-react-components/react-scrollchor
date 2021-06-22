@@ -1,5 +1,9 @@
 ## master (unreleased)
 
+## 7.0.1
+
+- Updated `package-lock.json` to avoid vulnerable dependencies reported by `npm audit`
+
 ## 7.0.0
 
 This new major version contains breaking changes.
